@@ -1,6 +1,0 @@
-framework module Pods_usecase_template {
-  umbrella header "Pods-usecase_template-umbrella.h"
-
-  export *
-  module * { export * }
-}
