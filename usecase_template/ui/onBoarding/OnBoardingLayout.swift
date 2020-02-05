@@ -100,21 +100,22 @@ class OnBoardingLayout : UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 1)
-        image.layer.cornerRadius = 25
+        image.layer.cornerRadius = 20
         return image
     }()
     
     let fadeInViewText : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 3
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 14)
         label.text = "Tife Just saved 25,000, Join her and get higher interest rates on your savings plan"
         return label
     }()
     
     let flowLayout : UICollectionViewFlowLayout = {
         let cf = UICollectionViewFlowLayout()
-        cf.itemSize = CGSize(width: 200, height: 200)
+        cf.itemSize = CGSize(width: 200, height: 150)
         return cf
     }()
     
@@ -218,14 +219,14 @@ class OnBoardingLayout : UIView {
         NSLayoutConstraint.activate([
             fadeInView.leadingAnchor.constraint(equalTo: bottomView.leadingAnchor, constant: 20),
              fadeInView.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor, constant: -20),
-            fadeInView.heightAnchor.constraint(equalToConstant: 100),
+            fadeInView.heightAnchor.constraint(equalToConstant: 80),
             fadeInView.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor)
             ])
         
         //MARK: Constraints for fadeInView
         NSLayoutConstraint.activate([
-            fadeInViewImage.widthAnchor.constraint(equalToConstant: 50),
-            fadeInViewImage.heightAnchor.constraint(equalToConstant: 50),
+            fadeInViewImage.widthAnchor.constraint(equalToConstant: 40),
+            fadeInViewImage.heightAnchor.constraint(equalToConstant: 40),
             fadeInViewImage.centerYAnchor.constraint(equalTo: fadeInView.centerYAnchor),
             fadeInViewImage.leadingAnchor.constraint(equalTo: fadeInView.leadingAnchor,constant: 10),
             
